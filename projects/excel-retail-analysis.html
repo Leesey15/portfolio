@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retail Sales &amp; Profitability Dashboard — Aseye Gbagbo</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Aseye Gbagbo</a>
+    <nav><a href="../index.html#projects">All projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="project">
+  <a class="back" href="../index.html#projects">← Back to all projects</a>
+  <h1>Retail Sales &amp; Profitability Dashboard</h1>
+  <p class="meta">Excel · Formula-driven analysis · 9,994 order line items, 2015-2018</p>
+  <div class="badges">
+    <span class="badge">Excel Tables</span><span class="badge">SUMIFS / COUNTIFS</span>
+    <span class="badge">INDEX/MATCH</span><span class="badge">Nested IF</span>
+    <span class="badge">Conditional Formatting</span><span class="badge">Dashboard Design</span>
+  </div>
+
+  <h2>The question</h2>
+  <p>
+    Which regions, categories, and discount levels actually drive profitability for a retailer — and where is
+    revenue being generated at the expense of margin? Built on the widely-used "Sample Superstore" dataset
+    (US retailer, 9,994 order line items, 2015-2018).
+  </p>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="num">$2.30M</div><div class="label">Total sales</div></div>
+    <div class="kpi"><div class="num">$286K</div><div class="label">Total profit</div></div>
+    <div class="kpi"><div class="num">12.5%</div><div class="label">Overall profit margin</div></div>
+    <div class="kpi"><div class="num">40,169</div><div class="label">live formulas, zero errors</div></div>
+  </div>
+
+  <h2>Key finding</h2>
+  <div class="callout">
+    Profit margin falls sharply as discount deepens. Orders with <strong>no discount</strong> average a
+    <strong>29.5% margin</strong>; orders discounted <strong>40% or more</strong> are sold at an average
+    <strong>-50.0% margin</strong> — a loss. Discounting isn't uniformly bad, but past roughly 20%, it stops
+    paying for itself in this dataset.
+  </div>
+
+  <img class="figure" src="../assets/images/excel_dashboard.jpg" alt="Excel dashboard showing KPI cards, sales by category, profit by region, profit margin by discount tier, and monthly sales trend charts">
+
+  <h2>How it's built</h2>
+  <ul>
+    <li><strong>Data</strong> sheet: the cleaned raw data as a native Excel Table, with three formula-driven
+    helper columns (Year-Month via <code>TEXT()</code>, Profit Margin, and a Discount Tier built with nested
+    <code>IF</code>), plus an <code>INDEX/MATCH</code> lookup column against a reference table.</li>
+    <li><strong>Summary</strong> sheet: pivot-style breakdowns by Category, Region, Segment, Discount Tier, and
+    Month — all built with <code>SUMIFS</code>/<code>COUNTIFS</code> against the Data table, so every number
+    recalculates automatically if the underlying data changes. A Top-10 sub-category ranking uses
+    <code>LARGE</code> + <code>INDEX/MATCH</code> rather than a hardcoded list.</li>
+    <li><strong>Dashboard</strong> sheet: KPI cards and five charts built directly from the Summary formulas.</li>
+  </ul>
+  <p>Every formula was verified with a recalculation pass: <strong>40,169 formulas, 0 errors.</strong></p>
+
+  <h2>Repository / download</h2>
+  <p>Full workbook: <code>projects/excel-retail-analysis/Aseye_Gbagbo_Excel_Retail_Sales_Dashboard.xlsx</code> in
+  this repository (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>).</p>
+</main>
+</div>
+
+<footer><div class="wrap">Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com</div></footer>
+</body>
+</html>

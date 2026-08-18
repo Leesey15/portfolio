@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Early Prediction of High-Potential Banking Customers — Aseye Gbagbo</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Aseye Gbagbo</a>
+    <nav><a href="../index.html#projects">All projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="project">
+  <a class="back" href="../index.html#projects">← Back to all projects</a>
+  <h1>Early Prediction of High-Potential Banking Customers</h1>
+  <p class="meta">MSc Data Science final-year thesis · University of Ghana · Machine Learning</p>
+  <div class="badges">
+    <span class="badge">Python</span><span class="badge">pandas</span><span class="badge">scikit-learn</span>
+    <span class="badge">Logistic Regression</span><span class="badge">Random Forest</span>
+    <span class="badge">Bootstrap Significance Testing</span>
+  </div>
+
+  <h2>The question</h2>
+  <p>
+    Banks conventionally wait close to a year of transaction history before confidently identifying which
+    new customers will become high-value. But behavioral science suggests habits stabilize within weeks —
+    so does a bank really need to wait that long? This project tests whether 30, 90, 180, or 365 days of
+    early transaction data can predict future customer value as reliably as the traditional long-window approach.
+  </p>
+
+  <h2>Dataset &amp; method</h2>
+  <p>
+    <a href="https://github.com/Kusainov/czech-banking-fin-analysis" target="_blank" rel="noopener">PKDD'99 Czech Financial Dataset</a>
+    (the "Berka dataset") — 4,500 real, anonymized bank accounts, 1993-1998, over 1 million transactions across
+    7 relational tables. Behavioral features (transaction frequency, monetary activity, balance trends, and five
+    habit-formation features grounded in cited psychology literature) were engineered strictly from within each
+    observation window, with the target label built only from a separate post-window period — no information
+    leakage between predictor and target. Logistic Regression and Random Forest were trained with a temporal,
+    cohort-based train/test split (not a random split, since this is a time-ordered problem).
+  </p>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="num">0.865</div><div class="label">ROC-AUC at 365 days (Random Forest)</div></div>
+    <div class="kpi"><div class="num">0.810</div><div class="label">ROC-AUC at 180 days</div></div>
+    <div class="kpi"><div class="num">4,500</div><div class="label">real bank accounts analyzed</div></div>
+    <div class="kpi"><div class="num">200</div><div class="label">bootstrap resamples per window</div></div>
+  </div>
+
+  <h2>Key finding</h2>
+  <div class="callout">
+    Predictive reliability keeps improving all the way to 365 days, but not at a constant rate. The jump from
+    90 to 180 days (+0.076 ROC-AUC) is roughly three times larger, per day waited, than the jump from 180 to
+    365 days (+0.055). Most of the achievable predictive reliability arrives by the six-month mark — waiting
+    the full year buys comparatively little. Both results are confirmed with bootstrap significance testing
+    across three different percentile thresholds for defining "high potential."
+  </div>
+
+  <img class="figure" src="../assets/images/msc_results_comparison.png" alt="F1-score and ROC-AUC by observation window, comparing Logistic Regression and Random Forest with and without behavioral features">
+
+  <table>
+    <thead><tr><th>Window</th><th>Model</th><th>Feature set</th><th>Accuracy</th><th>F1</th><th>ROC-AUC</th></tr></thead>
+    <tbody>
+      <tr><td>90 days</td><td>Random Forest</td><td>Financial + Behavioral</td><td>0.667</td><td>0.615</td><td>0.734</td></tr>
+      <tr><td>180 days</td><td>Random Forest</td><td>Financial + Behavioral</td><td>0.737</td><td>0.679</td><td>0.810</td></tr>
+      <tr><td>365 days</td><td>Random Forest</td><td>Financial only</td><td>0.776</td><td>0.700</td><td>0.857</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.85rem;color:var(--text-muted);">Full results across all four windows and both models are in <code>results/model_results.csv</code> in the repository.</p>
+
+  <h2>Why it matters</h2>
+  <p>
+    Average account balance and transaction inflow volume emerged as the strongest predictors — ahead of raw
+    transaction frequency. This gives banks a practical, evidence-based basis for assessing new customers around
+    the six-month mark instead of waiting a full year, enabling earlier, more targeted engagement.
+  </p>
+
+  <h2>Limitations (stated directly)</h2>
+  <ul>
+    <li>No open, transaction-level African banking dataset was available at the time of this study; replicating
+    it on African transaction or mobile-money data is flagged as future work.</li>
+    <li>The dataset spans 1993-1998 — banking behavior has evolved, though the underlying behavioral principles
+    tested remain relevant.</li>
+    <li>This project predicts <em>who</em> to act on, not whether acting on them changes outcomes — that
+    requires a separate field experiment.</li>
+  </ul>
+
+  <h2>Repository</h2>
+  <p>Full code, notebook, and results: <code>projects/msc-banking-prediction/</code> in this repository
+  (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>) —
+  <code>src/01_load_preprocess.py</code> through <code>05_threshold_sensitivity.py</code>, plus the full pipeline
+  notebook.</p>
+</main>
+</div>
+
+<footer><div class="wrap">Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com</div></footer>
+</body>
+</html>

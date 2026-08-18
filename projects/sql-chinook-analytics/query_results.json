@@ -1,0 +1,725 @@
+{
+  "Q1_revenue_by_country": [
+    {
+      "Country": "USA",
+      "total_invoices": 91,
+      "total_revenue": 523.06,
+      "avg_invoice_value": 5.75
+    },
+    {
+      "Country": "Canada",
+      "total_invoices": 56,
+      "total_revenue": 303.96,
+      "avg_invoice_value": 5.43
+    },
+    {
+      "Country": "France",
+      "total_invoices": 35,
+      "total_revenue": 195.1,
+      "avg_invoice_value": 5.57
+    },
+    {
+      "Country": "Brazil",
+      "total_invoices": 35,
+      "total_revenue": 190.1,
+      "avg_invoice_value": 5.43
+    },
+    {
+      "Country": "Germany",
+      "total_invoices": 28,
+      "total_revenue": 156.48,
+      "avg_invoice_value": 5.59
+    },
+    {
+      "Country": "United Kingdom",
+      "total_invoices": 21,
+      "total_revenue": 112.86,
+      "avg_invoice_value": 5.37
+    },
+    {
+      "Country": "Czech Republic",
+      "total_invoices": 14,
+      "total_revenue": 90.24,
+      "avg_invoice_value": 6.45
+    },
+    {
+      "Country": "Portugal",
+      "total_invoices": 14,
+      "total_revenue": 77.24,
+      "avg_invoice_value": 5.52
+    },
+    {
+      "Country": "India",
+      "total_invoices": 13,
+      "total_revenue": 75.26,
+      "avg_invoice_value": 5.79
+    },
+    {
+      "Country": "Chile",
+      "total_invoices": 7,
+      "total_revenue": 46.62,
+      "avg_invoice_value": 6.66
+    }
+  ],
+  "Q2_revenue_by_genre": [
+    {
+      "genre": "Rock",
+      "genre_revenue": 826.65,
+      "pct_of_total_revenue": 35.5
+    },
+    {
+      "genre": "Latin",
+      "genre_revenue": 382.14,
+      "pct_of_total_revenue": 16.41
+    },
+    {
+      "genre": "Metal",
+      "genre_revenue": 261.36,
+      "pct_of_total_revenue": 11.22
+    },
+    {
+      "genre": "Alternative & Punk",
+      "genre_revenue": 241.56,
+      "pct_of_total_revenue": 10.37
+    },
+    {
+      "genre": "TV Shows",
+      "genre_revenue": 93.53,
+      "pct_of_total_revenue": 4.02
+    },
+    {
+      "genre": "Jazz",
+      "genre_revenue": 79.2,
+      "pct_of_total_revenue": 3.4
+    },
+    {
+      "genre": "Blues",
+      "genre_revenue": 60.39,
+      "pct_of_total_revenue": 2.59
+    },
+    {
+      "genre": "Drama",
+      "genre_revenue": 57.71,
+      "pct_of_total_revenue": 2.48
+    },
+    {
+      "genre": "R&B/Soul",
+      "genre_revenue": 40.59,
+      "pct_of_total_revenue": 1.74
+    },
+    {
+      "genre": "Classical",
+      "genre_revenue": 40.59,
+      "pct_of_total_revenue": 1.74
+    }
+  ],
+  "Q3_monthly_running_total": [
+    {
+      "year_month": "2021-01",
+      "monthly_revenue": 35.64,
+      "running_total_revenue": 35.64
+    },
+    {
+      "year_month": "2021-02",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 73.26
+    },
+    {
+      "year_month": "2021-03",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 110.88
+    },
+    {
+      "year_month": "2021-04",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 148.5
+    },
+    {
+      "year_month": "2021-05",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 186.12
+    },
+    {
+      "year_month": "2021-06",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 223.74
+    },
+    {
+      "year_month": "2021-07",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 261.36
+    },
+    {
+      "year_month": "2021-08",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 298.98
+    },
+    {
+      "year_month": "2021-09",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 336.6
+    },
+    {
+      "year_month": "2021-10",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 374.22
+    },
+    {
+      "year_month": "2021-11",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 411.84
+    },
+    {
+      "year_month": "2021-12",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 449.46
+    },
+    {
+      "year_month": "2022-01",
+      "monthly_revenue": 52.62,
+      "running_total_revenue": 502.08
+    },
+    {
+      "year_month": "2022-02",
+      "monthly_revenue": 46.62,
+      "running_total_revenue": 548.7
+    },
+    {
+      "year_month": "2022-03",
+      "monthly_revenue": 44.62,
+      "running_total_revenue": 593.32
+    },
+    {
+      "year_month": "2022-04",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 630.94
+    },
+    {
+      "year_month": "2022-05",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 668.56
+    },
+    {
+      "year_month": "2022-06",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 706.18
+    },
+    {
+      "year_month": "2022-07",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 743.8
+    },
+    {
+      "year_month": "2022-08",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 781.42
+    },
+    {
+      "year_month": "2022-09",
+      "monthly_revenue": 36.63,
+      "running_total_revenue": 818.05
+    },
+    {
+      "year_month": "2022-10",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 855.67
+    },
+    {
+      "year_month": "2022-11",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 893.29
+    },
+    {
+      "year_month": "2022-12",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 930.91
+    },
+    {
+      "year_month": "2023-01",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 968.53
+    },
+    {
+      "year_month": "2023-02",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1006.15
+    },
+    {
+      "year_month": "2023-03",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1043.77
+    },
+    {
+      "year_month": "2023-04",
+      "monthly_revenue": 51.62,
+      "running_total_revenue": 1095.39
+    },
+    {
+      "year_month": "2023-05",
+      "monthly_revenue": 42.62,
+      "running_total_revenue": 1138.01
+    },
+    {
+      "year_month": "2023-06",
+      "monthly_revenue": 50.62,
+      "running_total_revenue": 1188.63
+    },
+    {
+      "year_month": "2023-07",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1226.25
+    },
+    {
+      "year_month": "2023-08",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1263.87
+    },
+    {
+      "year_month": "2023-09",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1301.49
+    },
+    {
+      "year_month": "2023-10",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1339.11
+    },
+    {
+      "year_month": "2023-11",
+      "monthly_revenue": 23.76,
+      "running_total_revenue": 1362.87
+    },
+    {
+      "year_month": "2023-12",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1400.49
+    },
+    {
+      "year_month": "2024-01",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1438.11
+    },
+    {
+      "year_month": "2024-02",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1475.73
+    },
+    {
+      "year_month": "2024-03",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1513.35
+    },
+    {
+      "year_month": "2024-04",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1550.97
+    },
+    {
+      "year_month": "2024-05",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1588.59
+    },
+    {
+      "year_month": "2024-06",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1626.21
+    },
+    {
+      "year_month": "2024-07",
+      "monthly_revenue": 39.62,
+      "running_total_revenue": 1665.83
+    },
+    {
+      "year_month": "2024-08",
+      "monthly_revenue": 47.62,
+      "running_total_revenue": 1713.45
+    },
+    {
+      "year_month": "2024-09",
+      "monthly_revenue": 46.71,
+      "running_total_revenue": 1760.16
+    },
+    {
+      "year_month": "2024-10",
+      "monthly_revenue": 42.62,
+      "running_total_revenue": 1802.78
+    },
+    {
+      "year_month": "2024-11",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1840.4
+    },
+    {
+      "year_month": "2024-12",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1878.02
+    },
+    {
+      "year_month": "2025-01",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1915.64
+    },
+    {
+      "year_month": "2025-02",
+      "monthly_revenue": 27.72,
+      "running_total_revenue": 1943.36
+    },
+    {
+      "year_month": "2025-03",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 1980.98
+    },
+    {
+      "year_month": "2025-04",
+      "monthly_revenue": 33.66,
+      "running_total_revenue": 2014.64
+    },
+    {
+      "year_month": "2025-05",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2052.26
+    },
+    {
+      "year_month": "2025-06",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2089.88
+    },
+    {
+      "year_month": "2025-07",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2127.5
+    },
+    {
+      "year_month": "2025-08",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2165.12
+    },
+    {
+      "year_month": "2025-09",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2202.74
+    },
+    {
+      "year_month": "2025-10",
+      "monthly_revenue": 37.62,
+      "running_total_revenue": 2240.36
+    },
+    {
+      "year_month": "2025-11",
+      "monthly_revenue": 49.62,
+      "running_total_revenue": 2289.98
+    },
+    {
+      "year_month": "2025-12",
+      "monthly_revenue": 38.62,
+      "running_total_revenue": 2328.6
+    }
+  ],
+  "Q4_top_customers_ranked": [
+    {
+      "spend_rank": 1,
+      "customer": "Helena Hol\u00fd",
+      "Country": "Czech Republic",
+      "lifetime_spend": 49.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 2,
+      "customer": "Richard Cunningham",
+      "Country": "USA",
+      "lifetime_spend": 47.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 3,
+      "customer": "Luis Rojas",
+      "Country": "Chile",
+      "lifetime_spend": 46.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 4,
+      "customer": "Ladislav Kov\u00e1cs",
+      "Country": "Hungary",
+      "lifetime_spend": 45.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 4,
+      "customer": "Hugh O'Reilly",
+      "Country": "Ireland",
+      "lifetime_spend": 45.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 6,
+      "customer": "Frank Ralston",
+      "Country": "USA",
+      "lifetime_spend": 43.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 6,
+      "customer": "Julia Barnett",
+      "Country": "USA",
+      "lifetime_spend": 43.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 6,
+      "customer": "Fynn Zimmermann",
+      "Country": "Germany",
+      "lifetime_spend": 43.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 9,
+      "customer": "Astrid Gruber",
+      "Country": "Austria",
+      "lifetime_spend": 42.62,
+      "orders": 7
+    },
+    {
+      "spend_rank": 9,
+      "customer": "Victor Stevens",
+      "Country": "USA",
+      "lifetime_spend": 42.62,
+      "orders": 7
+    }
+  ],
+  "Q5_employee_performance": [
+    {
+      "sales_agent": "Jane Peacock",
+      "Title": "Sales Support Agent",
+      "customers_managed": 21,
+      "invoices_handled": 146,
+      "total_revenue": 833.04
+    },
+    {
+      "sales_agent": "Margaret Park",
+      "Title": "Sales Support Agent",
+      "customers_managed": 20,
+      "invoices_handled": 140,
+      "total_revenue": 775.4
+    },
+    {
+      "sales_agent": "Steve Johnson",
+      "Title": "Sales Support Agent",
+      "customers_managed": 18,
+      "invoices_handled": 126,
+      "total_revenue": 720.16
+    }
+  ],
+  "Q6_customer_segments": [
+    {
+      "segment": "1. Top 25% spenders",
+      "customers": 15,
+      "segment_revenue": 654.3,
+      "avg_spend_per_customer": 43.62
+    },
+    {
+      "segment": "2. 2nd quartile",
+      "customers": 15,
+      "segment_revenue": 584.3,
+      "avg_spend_per_customer": 38.95
+    },
+    {
+      "segment": "3. 3rd quartile",
+      "customers": 15,
+      "segment_revenue": 564.3,
+      "avg_spend_per_customer": 37.62
+    },
+    {
+      "segment": "4. Bottom 25% spenders",
+      "customers": 14,
+      "segment_revenue": 525.7,
+      "avg_spend_per_customer": 37.55
+    }
+  ],
+  "Q7_yoy_aov_change": [
+    {
+      "year": "2021",
+      "avg_order_value": 5.42,
+      "prev_year_aov": null,
+      "pct_change": null
+    },
+    {
+      "year": "2022",
+      "avg_order_value": 5.8,
+      "prev_year_aov": 5.42,
+      "pct_change": 7.0
+    },
+    {
+      "year": "2023",
+      "avg_order_value": 5.66,
+      "prev_year_aov": 5.8,
+      "pct_change": -2.4
+    },
+    {
+      "year": "2024",
+      "avg_order_value": 5.75,
+      "prev_year_aov": 5.66,
+      "pct_change": 1.6
+    },
+    {
+      "year": "2025",
+      "avg_order_value": 5.63,
+      "prev_year_aov": 5.75,
+      "pct_change": -2.1
+    }
+  ],
+  "Q8_above_average_tracks": [
+    {
+      "artist": "Accept",
+      "album": "Balls to the Wall",
+      "track": "Balls to the Wall",
+      "times_purchased": 2
+    },
+    {
+      "artist": "AC/DC",
+      "album": "For Those About To Rock We Salute You",
+      "track": "Inject The Venom",
+      "times_purchased": 2
+    },
+    {
+      "artist": "AC/DC",
+      "album": "For Those About To Rock We Salute You",
+      "track": "Snowballed",
+      "times_purchased": 2
+    },
+    {
+      "artist": "AC/DC",
+      "album": "Let There Be Rock",
+      "track": "Overdose",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Aerosmith",
+      "album": "Big Ones",
+      "track": "Deuces Are Wild",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Alanis Morissette",
+      "album": "Jagged Little Pill",
+      "track": "Not The Doctor",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Ant\u00f4nio Carlos Jobim",
+      "album": "Warner 25 Anos",
+      "track": "Por Causa De Voc\u00ea",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Apocalyptica",
+      "album": "Plays Metallica By Four Cellos",
+      "track": "Welcome Home (Sanitarium)",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Black Sabbath",
+      "album": "Black Sabbath Vol. 4 (Remaster)",
+      "track": "Snowblind",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Black Sabbath",
+      "album": "Black Sabbath Vol. 4 (Remaster)",
+      "track": "Cornucopia",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Body Count",
+      "album": "Body Count",
+      "track": "Bowels Of The Devil",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Body Count",
+      "album": "Body Count",
+      "track": "Voodoo",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Bruce Dickinson",
+      "album": "Chemical Wedding",
+      "track": "Chemical Wedding",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Buddy Guy",
+      "album": "The Best Of Buddy Guy - The Millenium Collection",
+      "track": "When My Left Eye Jumps",
+      "times_purchased": 2
+    },
+    {
+      "artist": "Caetano Veloso",
+      "album": "Prenda Minha",
+      "track": "Medita\u00e7\u00e3o",
+      "times_purchased": 2
+    }
+  ],
+  "Q9_view_usage_example": [
+    {
+      "Country": "USA",
+      "year_month": "2021-01",
+      "revenue": 13.86
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-02",
+      "revenue": 0.99
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-03",
+      "revenue": 13.86
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-04",
+      "revenue": 13.86
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-06",
+      "revenue": 18.81
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-09",
+      "revenue": 14.85
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-10",
+      "revenue": 0.99
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-11",
+      "revenue": 3.96
+    },
+    {
+      "Country": "USA",
+      "year_month": "2021-12",
+      "revenue": 22.77
+    },
+    {
+      "Country": "USA",
+      "year_month": "2022-01",
+      "revenue": 0.99
+    },
+    {
+      "Country": "USA",
+      "year_month": "2022-02",
+      "revenue": 7.92
+    },
+    {
+      "Country": "USA",
+      "year_month": "2022-03",
+      "revenue": 15.86
+    }
+  ]
+}

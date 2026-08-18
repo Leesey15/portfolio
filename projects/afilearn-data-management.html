@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfiLearn — Data Management Pipeline — Aseye Gbagbo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .phase-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+  .phase { background: var(--surface-card); border: 1px solid var(--border); border-left: 4px solid var(--blue);
+    border-radius: 8px; padding: 12px 14px; }
+  .phase .n { font-size: 0.72rem; color: var(--blue); font-weight: 700; letter-spacing: .04em; }
+  .phase .t { font-size: 0.92rem; font-weight: 600; color: var(--navy); margin-top: 2px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Aseye Gbagbo</a>
+    <nav><a href="../index.html#projects">All projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="project">
+  <a class="back" href="../index.html#projects">← Back to all projects</a>
+  <h1>AfiLearn — End-to-End Data Management Pipeline</h1>
+  <p class="meta">DSCD 606 Data Management Techniques · University Learning Analytics · Data Engineering</p>
+  <div class="badges">
+    <span class="badge">SQL / SQLite</span><span class="badge">DuckDB</span><span class="badge">Python</span>
+    <span class="badge">Star Schema</span><span class="badge">ETL</span><span class="badge">NoSQL</span>
+    <span class="badge">Security &amp; RBAC</span>
+  </div>
+
+  <h2>The scope</h2>
+  <p>
+    A full data-management lifecycle project built on the OULAD (Open University Learning Analytics Dataset)
+    structure — 32,593 students, 7 relational source files, 11.1 million interaction rows in the full dataset.
+    Rather than a single analysis, this project builds the entire pipeline a real learning-analytics platform
+    would need: from raw file profiling through governance, database design, optimization, warehousing, and
+    security — 13 phases end to end.
+  </p>
+
+  <div class="callout">
+    A runnable demo script (<code>afilearn_all_phases_demo.py</code>) reproduces every phase live on a small
+    sample in seconds, so the full pipeline can be verified without needing the 11.1M-row source dataset on hand.
+  </div>
+
+  <h2>The 13 phases</h2>
+  <div class="phase-grid">
+    <div class="phase"><div class="n">PHASE 1</div><div class="t">Data Profiling</div></div>
+    <div class="phase"><div class="n">PHASE 2</div><div class="t">Lifecycle, Governance &amp; Metadata</div></div>
+    <div class="phase"><div class="n">PHASE 3-4</div><div class="t">Database Design &amp; Implementation</div></div>
+    <div class="phase"><div class="n">PHASE 5</div><div class="t">Query Optimization</div></div>
+    <div class="phase"><div class="n">PHASE 6</div><div class="t">ETL &amp; Data Quality</div></div>
+    <div class="phase"><div class="n">PHASE 7</div><div class="t">Data Warehouse (Star Schema)</div></div>
+    <div class="phase"><div class="n">PHASE 8</div><div class="t">NoSQL Implementation</div></div>
+    <div class="phase"><div class="n">PHASE 9</div><div class="t">Big Data Processing (DuckDB)</div></div>
+    <div class="phase"><div class="n">PHASE 10</div><div class="t">Notebooks &amp; Analysis</div></div>
+    <div class="phase"><div class="n">PHASE 11</div><div class="t">Pipeline Orchestration</div></div>
+    <div class="phase"><div class="n">PHASE 12</div><div class="t">Security, Privacy, Access Control &amp; Backup</div></div>
+    <div class="phase"><div class="n">PHASE 13</div><div class="t">Final Integration / System Verification</div></div>
+  </div>
+
+  <h2>Selected technical highlights</h2>
+  <ul>
+    <li><strong>Schema design:</strong> 7 tables in 3NF, composite primary keys, foreign key constraints, and
+    <code>CHECK</code> constraints enforcing valid gender/result/score ranges at the database level — verified with
+    an automated constraint-rejection test (invalid foreign keys and out-of-range values are rejected automatically).</li>
+    <li><strong>Query optimization:</strong> demonstrated with <code>EXPLAIN QUERY PLAN</code>, a composite index on
+    the largest interaction table, and <code>ANALYZE</code> — reported 87-95% query time improvement on the full
+    10.6M-row table.</li>
+    <li><strong>Data quality:</strong> six automated checks (null constraints, valid value sets, numeric range checks,
+    referential integrity) run as part of the pipeline and reported as a pass/fail JSON summary.</li>
+    <li><strong>Star-schema warehouse:</strong> <code>dim_student</code>, <code>dim_course</code>,
+    <code>fact_student_assessment</code> — enabling pass-rate-by-course queries via the fact table, the same
+    warehousing pattern used in the Power BI project on this site.</li>
+    <li><strong>Big data processing:</strong> DuckDB used for MapReduce-style aggregation, reporting 896K rows/sec
+    on the full dataset.</li>
+    <li><strong>Security:</strong> role-based access control (Admin / Analyst / Viewer) with tested permission
+    boundaries, SHA-256 pseudonymisation for PII masking, and checksum-verified backups.</li>
+  </ul>
+
+  <h2>Sample output — automated data quality report</h2>
+  <pre><code>{
+  "summary": { "total_checks": 6, "passed": 6, "failed": 0 },
+  "checks": [
+    {"id": "DQ001", "description": "id_student NOT NULL", "status": "PASS"},
+    {"id": "DQ002", "description": "final_result in valid set", "status": "PASS"},
+    {"id": "DQ006", "description": "FK: students -&gt; courses valid", "status": "PASS"}
+  ]
+}</code></pre>
+
+  <h2>Repository</h2>
+  <p>Full demo script: <code>projects/afilearn-data-management/afilearn_all_phases_demo.py</code> in this
+  repository (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>) —
+  run with <code>python3 afilearn_all_phases_demo.py</code>, requires only <code>pandas</code> and
+  <code>duckdb</code>.</p>
+</main>
+</div>
+
+<footer><div class="wrap">Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com</div></footer>
+</body>
+</html>

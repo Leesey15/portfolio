@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Business Analytics — Aseye Gbagbo</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Aseye Gbagbo</a>
+    <nav><a href="../index.html#projects">All projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="project">
+  <a class="back" href="../index.html#projects">← Back to all projects</a>
+  <h1>Digital Media Store — SQL Business Analytics</h1>
+  <p class="meta">SQL / SQLite · 9 business-analytics queries · Chinook sample database</p>
+  <div class="badges">
+    <span class="badge">Joins</span><span class="badge">CTEs</span><span class="badge">RANK / NTILE / LAG</span>
+    <span class="badge">Running Totals</span><span class="badge">Views</span>
+  </div>
+
+  <h2>The scope</h2>
+  <p>
+    Nine queries against the <a href="https://github.com/lerocha/chinook-database" target="_blank" rel="noopener">Chinook
+    sample database</a> — a relational digital media store (customers, invoices, tracks, albums, artists,
+    employees) — chosen to demonstrate the query patterns behind most real revenue, customer, and performance
+    reporting: multi-table joins, subqueries, CTEs, and window functions.
+  </p>
+  <p style="font-size:0.85rem;color:var(--text-muted);">
+    This is a small, widely-used public practice dataset (59 customers, 412 invoices) — absolute revenue figures
+    are illustrative, not business-scale. The point is the query technique.
+  </p>
+
+  <h2>Selected results (real query output)</h2>
+
+  <h3 style="color:var(--navy);font-size:1.05rem;">Revenue by genre — window: which genres dominate?</h3>
+  <table>
+    <thead><tr><th>Genre</th><th>Revenue</th><th>% of total</th></tr></thead>
+    <tbody>
+      <tr><td>Rock</td><td>$826.65</td><td>35.5%</td></tr>
+      <tr><td>Latin</td><td>$382.14</td><td>16.4%</td></tr>
+      <tr><td>Metal</td><td>$261.36</td><td>11.2%</td></tr>
+      <tr><td>Alternative &amp; Punk</td><td>$241.56</td><td>10.4%</td></tr>
+    </tbody>
+  </table>
+  <p>Rock alone outsells the next three genres combined.</p>
+
+  <h3 style="color:var(--navy);font-size:1.05rem;">Customer value segmentation — <code>NTILE(4) OVER</code></h3>
+  <table>
+    <thead><tr><th>Segment</th><th>Customers</th><th>Segment revenue</th><th>Avg spend/customer</th></tr></thead>
+    <tbody>
+      <tr><td>Top 25% spenders</td><td>15</td><td>$654.30</td><td>$43.62</td></tr>
+      <tr><td>2nd quartile</td><td>15</td><td>$584.30</td><td>$38.95</td></tr>
+      <tr><td>3rd quartile</td><td>15</td><td>$564.30</td><td>$37.62</td></tr>
+      <tr><td>Bottom 25% spenders</td><td>14</td><td>$525.70</td><td>$37.55</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="color:var(--navy);font-size:1.05rem;">Year-over-year average order value — <code>LAG() OVER</code></h3>
+  <table>
+    <thead><tr><th>Year</th><th>Avg order value</th><th>Prior year</th><th>% change</th></tr></thead>
+    <tbody>
+      <tr><td>2022</td><td>$5.80</td><td>$5.42</td><td>+7.0%</td></tr>
+      <tr><td>2023</td><td>$5.66</td><td>$5.80</td><td>-2.4%</td></tr>
+      <tr><td>2024</td><td>$5.75</td><td>$5.66</td><td>+1.6%</td></tr>
+      <tr><td>2025</td><td>$5.63</td><td>$5.75</td><td>-2.1%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>All 9 queries</h2>
+  <ol>
+    <li>Revenue by country — JOIN, GROUP BY, aggregates</li>
+    <li>Revenue by genre and % of total — multi-table JOIN, scalar subquery</li>
+    <li>Monthly revenue with cumulative running total — <code>SUM() OVER</code></li>
+    <li>Top 10 customers by lifetime spend, ranked — <code>RANK() OVER</code></li>
+    <li>Sales performance by employee — 3-table JOIN</li>
+    <li>Customer value segmentation — CTE + <code>NTILE(4) OVER</code></li>
+    <li>Year-over-year average order value — CTE + <code>LAG() OVER</code></li>
+    <li>Tracks purchased more than the store average — correlated subquery, HAVING</li>
+    <li>Reusable view for downstream reporting tools — <code>CREATE VIEW</code></li>
+  </ol>
+
+  <h2>Sample query</h2>
+  <pre><code>WITH customer_spend AS (
+  SELECT c.CustomerId, SUM(i.Total) AS total_spend
+  FROM Customer c JOIN Invoice i ON i.CustomerId = c.CustomerId
+  GROUP BY c.CustomerId
+),
+tiered AS (
+  SELECT *, NTILE(4) OVER (ORDER BY total_spend DESC) AS spend_quartile
+  FROM customer_spend
+)
+SELECT spend_quartile, COUNT(*) AS customers, ROUND(SUM(total_spend),2) AS segment_revenue
+FROM tiered GROUP BY spend_quartile ORDER BY spend_quartile;</code></pre>
+
+  <h2>Repository</h2>
+  <p><code>projects/sql-chinook-analytics/analysis_queries.sql</code> (all 9 queries, commented) and
+  <code>run_queries.py</code> (executes and exports every result) in this repository
+  (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>).</p>
+</main>
+</div>
+
+<footer><div class="wrap">Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com</div></footer>
+</body>
+</html>

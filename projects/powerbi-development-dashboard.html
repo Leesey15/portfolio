@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Human Development Dashboard — Aseye Gbagbo</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Aseye Gbagbo</a>
+    <nav><a href="../index.html#projects">All projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="project">
+  <a class="back" href="../index.html#projects">← Back to all projects</a>
+  <h1>Global Human Development Dashboard</h1>
+  <p class="meta">Power BI · Data modeling &amp; DAX · 193 countries, 2000-2015</p>
+  <div class="badges">
+    <span class="badge">Power BI</span><span class="badge">DAX</span><span class="badge">Star Schema</span>
+    <span class="badge">Data Cleaning</span>
+  </div>
+
+  <div class="callout">
+    <strong>In progress:</strong> the data model, all DAX measures, and the full page-by-page layout for this
+    dashboard are built and documented below. The visuals themselves are being built directly in Power BI
+    Desktop — screenshots will be added here once complete.
+  </div>
+
+  <h2>The question</h2>
+  <p>
+    How do health, education, and income relate to life expectancy across countries — and how has that
+    relationship shifted between 2000 and 2015? This deliberately mirrors the three components of the UN
+    Human Development Index (health, education, income), the kind of indicator work UNDP uses to track its
+    own Digital Strategy and development outcomes.
+  </p>
+
+  <h2>Dataset</h2>
+  <p>
+    WHO Global Health Observatory life expectancy data across 193 countries, enriched with UN region/sub-region
+    classifications. 18 indicators per country-year: life expectancy, adult/infant mortality, immunization
+    rates, health expenditure, GDP per capita, population, schooling years, and income composition of resources
+    (a 0-1 scaled proxy for HDI's income component).
+  </p>
+  <p style="font-size:0.85rem;color:var(--text-muted);">
+    This is a real public health dataset with genuine gaps in several indicators — handled by leaving them as
+    blanks rather than silently filling them, so Power BI's aggregates exclude missing values correctly instead
+    of treating them as zero.
+  </p>
+
+  <h2>Data model — star schema</h2>
+  <pre><code>Dim_Country  (193 rows)   CountryKey, Country, ISO3, Region, SubRegion, Status
+Dim_Year     (16 rows)    YearKey, Year
+Fact_HealthDevelopment (2,938 rows)  CountryKey, YearKey, + 18 indicators
+
+Fact_HealthDevelopment[CountryKey] → Dim_Country[CountryKey]   (many-to-one)
+Fact_HealthDevelopment[YearKey]    → Dim_Year[YearKey]          (many-to-one)</code></pre>
+  <p>Same star-schema modeling principle as the AfiLearn data warehouse project on this site — applied here in Power BI instead of SQL.</p>
+
+  <h2>DAX measures</h2>
+  <pre><code>Avg Life Expectancy = AVERAGE ( Fact_HealthDevelopment[LifeExpectancy] )
+
+Life Expectancy YoY Change =
+VAR CurrentYear = MAX ( Dim_Year[Year] )
+VAR PriorYearAvg =
+    CALCULATE (
+        [Avg Life Expectancy],
+        FILTER ( ALL ( Dim_Year ), Dim_Year[Year] = CurrentYear - 1 )
+    )
+RETURN [Avg Life Expectancy] - PriorYearAvg
+
+Life Expectancy Rank = RANKX ( ALL ( Dim_Country ), [Avg Life Expectancy], , DESC )</code></pre>
+  <p style="font-size:0.85rem;color:var(--text-muted);">Full measure list (7 measures) in the repository README.</p>
+
+  <h2>Planned layout — 3 report pages</h2>
+  <ul>
+    <li><strong>Global Overview</strong> — KPI cards, a filled map colored by life expectancy, a Developed-vs-Developing
+    trend line, and Year/Region/Status slicers.</li>
+    <li><strong>Human Development Lens</strong> — three KPI cards echoing HDI's health/education/income components,
+    plus a Gapminder-style scatter (GDP per capita × life expectancy, sized by population, colored by region).</li>
+    <li><strong>Regional Comparison</strong> — bar chart and table comparing regions across all key indicators.</li>
+  </ul>
+
+  <h2>Repository</h2>
+  <p><code>projects/powerbi-development-dashboard/</code> — the cleaned CSVs (<code>Dim_Country.csv</code>,
+  <code>Dim_Year.csv</code>, <code>Fact_HealthDevelopment.csv</code>), the build script, and the full README with
+  every DAX measure and layout instruction, in this repository
+  (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>).</p>
+</main>
+</div>
+
+<footer><div class="wrap">Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com</div></footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+CountryKey,Country,ISO3,Region,SubRegion,Status
+1,Afghanistan,AFG,Asia,Southern Asia,Developing
+2,Albania,ALB,Europe,Southern Europe,Developing
+3,Algeria,DZA,Africa,Northern Africa,Developing
+4,Angola,AGO,Africa,Sub-Saharan Africa,Developing
+5,Antigua and Barbuda,ATG,Americas,Latin America and the Caribbean,Developing
+6,Argentina,ARG,Americas,Latin America and the Caribbean,Developing
+7,Armenia,ARM,Asia,Western Asia,Developing
+8,Australia,AUS,Oceania,Australia and New Zealand,Developed
+9,Austria,AUT,Europe,Western Europe,Developed
+10,Azerbaijan,AZE,Asia,Western Asia,Developing
+11,Bahamas,BHS,Americas,Latin America and the Caribbean,Developing
+12,Bahrain,BHR,Asia,Western Asia,Developing
+13,Bangladesh,BGD,Asia,Southern Asia,Developing
+14,Barbados,BRB,Americas,Latin America and the Caribbean,Developing
+15,Belarus,BLR,Europe,Eastern Europe,Developing
+16,Belgium,BEL,Europe,Western Europe,Developed
+17,Belize,BLZ,Americas,Latin America and the Caribbean,Developing
+18,Benin,BEN,Africa,Sub-Saharan Africa,Developing
+19,Bhutan,BTN,Asia,Southern Asia,Developing
+20,Bolivia (Plurinational State of),BOL,Americas,Latin America and the Caribbean,Developing
+21,Bosnia and Herzegovina,BIH,Europe,Southern Europe,Developing
+22,Botswana,BWA,Africa,Sub-Saharan Africa,Developing
+23,Brazil,BRA,Americas,Latin America and the Caribbean,Developing
+24,Brunei Darussalam,BRN,Asia,South-eastern Asia,Developing
+25,Bulgaria,BGR,Europe,Eastern Europe,Developed
+26,Burkina Faso,BFA,Africa,Sub-Saharan Africa,Developing
+27,Burundi,BDI,Africa,Sub-Saharan Africa,Developing
+28,Cabo Verde,CPV,Africa,Sub-Saharan Africa,Developing
+29,Cambodia,KHM,Asia,South-eastern Asia,Developing
+30,Cameroon,CMR,Africa,Sub-Saharan Africa,Developing
+31,Canada,CAN,Americas,Northern America,Developing
+32,Central African Republic,CAF,Africa,Sub-Saharan Africa,Developing
+33,Chad,TCD,Africa,Sub-Saharan Africa,Developing
+34,Chile,CHL,Americas,Latin America and the Caribbean,Developing
+35,China,CHN,Asia,Eastern Asia,Developing
+36,Colombia,COL,Americas,Latin America and the Caribbean,Developing
+37,Comoros,COM,Africa,Sub-Saharan Africa,Developing
+38,Congo,COG,Africa,Sub-Saharan Africa,Developing
+39,Cook Islands,COK,Oceania,Polynesia,Developing
+40,Costa Rica,CRI,Americas,Latin America and the Caribbean,Developing
+41,Croatia,HRV,Europe,Southern Europe,Developed
+42,Cuba,CUB,Americas,Latin America and the Caribbean,Developing
+43,Cyprus,CYP,Asia,Western Asia,Developed
+44,Czechia,CZE,Europe,Eastern Europe,Developed
+45,Côte d'Ivoire,CIV,Africa,Sub-Saharan Africa,Developing
+46,Democratic People's Republic of Korea,PRK,Asia,Eastern Asia,Developing
+47,Democratic Republic of the Congo,COD,Africa,Sub-Saharan Africa,Developing
+48,Denmark,DNK,Europe,Northern Europe,Developed
+49,Djibouti,DJI,Africa,Sub-Saharan Africa,Developing
+50,Dominica,DMA,Americas,Latin America and the Caribbean,Developing
+51,Dominican Republic,DOM,Americas,Latin America and the Caribbean,Developing
+52,Ecuador,ECU,Americas,Latin America and the Caribbean,Developing
+53,Egypt,EGY,Africa,Northern Africa,Developing
+54,El Salvador,SLV,Americas,Latin America and the Caribbean,Developing
+55,Equatorial Guinea,GNQ,Africa,Sub-Saharan Africa,Developing
+56,Eritrea,ERI,Africa,Sub-Saharan Africa,Developing
+57,Estonia,EST,Europe,Northern Europe,Developing
+58,Ethiopia,ETH,Africa,Sub-Saharan Africa,Developing
+59,Fiji,FJI,Oceania,Melanesia,Developing
+60,Finland,FIN,Europe,Northern Europe,Developing
+61,France,FRA,Europe,Western Europe,Developing
+62,Gabon,GAB,Africa,Sub-Saharan Africa,Developing
+63,Gambia,GMB,Africa,Sub-Saharan Africa,Developing
+64,Georgia,GEO,Asia,Western Asia,Developing
+65,Germany,DEU,Europe,Western Europe,Developed
+66,Ghana,GHA,Africa,Sub-Saharan Africa,Developing
+67,Greece,GRC,Europe,Southern Europe,Developing
+68,Grenada,GRD,Americas,Latin America and the Caribbean,Developing
+69,Guatemala,GTM,Americas,Latin America and the Caribbean,Developing
+70,Guinea,GIN,Africa,Sub-Saharan Africa,Developing
+71,Guinea-Bissau,GNB,Africa,Sub-Saharan Africa,Developing
+72,Guyana,GUY,Americas,Latin America and the Caribbean,Developing
+73,Haiti,HTI,Americas,Latin America and the Caribbean,Developing
+74,Honduras,HND,Americas,Latin America and the Caribbean,Developing
+75,Hungary,HUN,Europe,Eastern Europe,Developed
+76,Iceland,ISL,Europe,Northern Europe,Developed
+77,India,IND,Asia,Southern Asia,Developing
+78,Indonesia,IDN,Asia,South-eastern Asia,Developing
+79,Iran (Islamic Republic of),IRN,Asia,Southern Asia,Developing
+80,Iraq,IRQ,Asia,Western Asia,Developing
+81,Ireland,IRL,Europe,Northern Europe,Developed
+82,Israel,ISR,Asia,Western Asia,Developing
+83,Italy,ITA,Europe,Southern Europe,Developed
+84,Jamaica,JAM,Americas,Latin America and the Caribbean,Developing
+85,Japan,JPN,Asia,Eastern Asia,Developed
+86,Jordan,JOR,Asia,Western Asia,Developing
+87,Kazakhstan,KAZ,Asia,Central Asia,Developing
+88,Kenya,KEN,Africa,Sub-Saharan Africa,Developing
+89,Kiribati,KIR,Oceania,Micronesia,Developing
+90,Kuwait,KWT,Asia,Western Asia,Developing
+91,Kyrgyzstan,KGZ,Asia,Central Asia,Developing
+92,Lao People's Democratic Republic,LAO,Asia,South-eastern Asia,Developing
+93,Latvia,LVA,Europe,Northern Europe,Developed
+94,Lebanon,LBN,Asia,Western Asia,Developing
+95,Lesotho,LSO,Africa,Sub-Saharan Africa,Developing
+96,Liberia,LBR,Africa,Sub-Saharan Africa,Developing
+97,Libya,LBY,Africa,Northern Africa,Developing
+98,Lithuania,LTU,Europe,Northern Europe,Developed
+99,Luxembourg,LUX,Europe,Western Europe,Developed
+100,Madagascar,MDG,Africa,Sub-Saharan Africa,Developing
+101,Malawi,MWI,Africa,Sub-Saharan Africa,Developing
+102,Malaysia,MYS,Asia,South-eastern Asia,Developing
+103,Maldives,MDV,Asia,Southern Asia,Developing
+104,Mali,MLI,Africa,Sub-Saharan Africa,Developing
+105,Malta,MLT,Europe,Southern Europe,Developed
+106,Marshall Islands,MHL,Oceania,Micronesia,Developing
+107,Mauritania,MRT,Africa,Sub-Saharan Africa,Developing
+108,Mauritius,MUS,Africa,Sub-Saharan Africa,Developing
+109,Mexico,MEX,Americas,Latin America and the Caribbean,Developing
+110,Micronesia (Federated States of),FSM,Oceania,Micronesia,Developing
+111,Monaco,MCO,Europe,Western Europe,Developing
+112,Mongolia,MNG,Asia,Eastern Asia,Developing
+113,Montenegro,MNE,Europe,Southern Europe,Developing
+114,Morocco,MAR,Africa,Northern Africa,Developing
+115,Mozambique,MOZ,Africa,Sub-Saharan Africa,Developing
+116,Myanmar,MMR,Asia,South-eastern Asia,Developing
+117,Namibia,NAM,Africa,Sub-Saharan Africa,Developing
+118,Nauru,NRU,Oceania,Micronesia,Developing
+119,Nepal,NPL,Asia,Southern Asia,Developing
+120,Netherlands,NLD,Europe,Western Europe,Developed
+121,New Zealand,NZL,Oceania,Australia and New Zealand,Developed
+122,Nicaragua,NIC,Americas,Latin America and the Caribbean,Developing
+123,Niger,NER,Africa,Sub-Saharan Africa,Developing
+124,Nigeria,NGA,Africa,Sub-Saharan Africa,Developing
+125,Niue,NIU,Oceania,Polynesia,Developing
+126,Norway,NOR,Europe,Northern Europe,Developed
+127,Oman,OMN,Asia,Western Asia,Developing
+128,Pakistan,PAK,Asia,Southern Asia,Developing
+129,Palau,PLW,Oceania,Micronesia,Developing
+130,Panama,PAN,Americas,Latin America and the Caribbean,Developing
+131,Papua New Guinea,PNG,Oceania,Melanesia,Developing
+132,Paraguay,PRY,Americas,Latin America and the Caribbean,Developing
+133,Peru,PER,Americas,Latin America and the Caribbean,Developing
+134,Philippines,PHL,Asia,South-eastern Asia,Developing
+135,Poland,POL,Europe,Eastern Europe,Developed
+136,Portugal,PRT,Europe,Southern Europe,Developed
+137,Qatar,QAT,Asia,Western Asia,Developing
+138,Republic of Korea,KOR,Asia,Eastern Asia,Developing
+139,Republic of Moldova,MDA,Europe,Eastern Europe,Developing
+140,Romania,ROU,Europe,Eastern Europe,Developed
+141,Russian Federation,RUS,Europe,Eastern Europe,Developing
+142,Rwanda,RWA,Africa,Sub-Saharan Africa,Developing
+143,Saint Kitts and Nevis,KNA,Americas,Latin America and the Caribbean,Developing
+144,Saint Lucia,LCA,Americas,Latin America and the Caribbean,Developing
+145,Saint Vincent and the Grenadines,VCT,Americas,Latin America and the Caribbean,Developing
+146,Samoa,WSM,Oceania,Polynesia,Developing
+147,San Marino,SMR,Europe,Southern Europe,Developing
+148,Sao Tome and Principe,STP,Africa,Sub-Saharan Africa,Developing
+149,Saudi Arabia,SAU,Asia,Western Asia,Developing
+150,Senegal,SEN,Africa,Sub-Saharan Africa,Developing
+151,Serbia,SRB,Europe,Southern Europe,Developing
+152,Seychelles,SYC,Africa,Sub-Saharan Africa,Developing
+153,Sierra Leone,SLE,Africa,Sub-Saharan Africa,Developing
+154,Singapore,SGP,Asia,South-eastern Asia,Developed
+155,Slovakia,SVK,Europe,Eastern Europe,Developed
+156,Slovenia,SVN,Europe,Southern Europe,Developed
+157,Solomon Islands,SLB,Oceania,Melanesia,Developing
+158,Somalia,SOM,Africa,Sub-Saharan Africa,Developing
+159,South Africa,ZAF,Africa,Sub-Saharan Africa,Developing
+160,South Sudan,SSD,Africa,Sub-Saharan Africa,Developing
+161,Spain,ESP,Europe,Southern Europe,Developed
+162,Sri Lanka,LKA,Asia,Southern Asia,Developing
+163,Sudan,SDN,Africa,Northern Africa,Developing
+164,Suriname,SUR,Americas,Latin America and the Caribbean,Developing
+165,Swaziland,SWZ,Africa,Sub-Saharan Africa,Developing
+166,Sweden,SWE,Europe,Northern Europe,Developed
+167,Switzerland,CHE,Europe,Western Europe,Developed
+168,Syrian Arab Republic,SYR,Asia,Western Asia,Developing
+169,Tajikistan,TJK,Asia,Central Asia,Developing
+170,Thailand,THA,Asia,South-eastern Asia,Developing
+171,The former Yugoslav republic of Macedonia,MKD,Europe,Southern Europe,Developing
+172,Timor-Leste,TLS,Asia,South-eastern Asia,Developing
+173,Togo,TGO,Africa,Sub-Saharan Africa,Developing
+174,Tonga,TON,Oceania,Polynesia,Developing
+175,Trinidad and Tobago,TTO,Americas,Latin America and the Caribbean,Developing
+176,Tunisia,TUN,Africa,Northern Africa,Developing
+177,Turkey,TUR,Asia,Western Asia,Developing
+178,Turkmenistan,TKM,Asia,Central Asia,Developing
+179,Tuvalu,TUV,Oceania,Polynesia,Developing
+180,Uganda,UGA,Africa,Sub-Saharan Africa,Developing
+181,Ukraine,UKR,Europe,Eastern Europe,Developing
+182,United Arab Emirates,ARE,Asia,Western Asia,Developing
+183,United Kingdom of Great Britain and Northern Ireland,GBR,Europe,Northern Europe,Developed
+184,United Republic of Tanzania,TZA,Africa,Sub-Saharan Africa,Developing
+185,United States of America,USA,Americas,Northern America,Developed
+186,Uruguay,URY,Americas,Latin America and the Caribbean,Developing
+187,Uzbekistan,UZB,Asia,Central Asia,Developing
+188,Vanuatu,VUT,Oceania,Melanesia,Developing
+189,Venezuela (Bolivarian Republic of),VEN,Americas,Latin America and the Caribbean,Developing
+190,Viet Nam,VNM,Asia,South-eastern Asia,Developing
+191,Yemen,YEM,Asia,Western Asia,Developing
+192,Zambia,ZMB,Africa,Sub-Saharan Africa,Developing
+193,Zimbabwe,ZWE,Africa,Sub-Saharan Africa,Developing
