@@ -3,14 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Human Development Dashboard — Aseye Gbagbo</title>
+<title>Global Human Development Dashboard · Aseye Gbagbo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
 </head>
-<body>
+<body class="proj-pbi">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Aseye Gbagbo</a>
-    <nav><a href="../index.html#projects">All projects</a></nav>
+    <nav><a href="../index.html#projects">All projects</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
   </div>
 </header>
 
@@ -25,40 +34,42 @@
   </div>
 
   <div class="callout">
-    <strong>In progress:</strong> the data model, all DAX measures, and the full page-by-page layout for this
+    <strong>In progress:</strong> the data model, all DAX measures, and the full page by page layout for this
     dashboard are built and documented below. The visuals themselves are being built directly in Power BI
-    Desktop — screenshots will be added here once complete.
+    Desktop, and screenshots will be added here once complete.
   </div>
 
-  <h2>The question</h2>
+  <h2>In plain terms</h2>
   <p>
-    How do health, education, and income relate to life expectancy across countries — and how has that
-    relationship shifted between 2000 and 2015? This deliberately mirrors the three components of the UN
-    Human Development Index (health, education, income), the kind of indicator work UNDP uses to track its
-    own Digital Strategy and development outcomes.
+    Businesses use dashboards like this to track how outcomes relate to investment, whether that is regional
+    performance against spending, or social impact against program budgets. This dashboard explores how
+    health, education, and income relate to life expectancy across countries, and how that relationship has
+    shifted between 2000 and 2015. It deliberately mirrors the three components of the UN Human Development
+    Index (health, education, income), the kind of indicator work an organization like UNDP uses to track its
+    own strategy and development outcomes.
   </p>
 
   <h2>Dataset</h2>
   <p>
-    WHO Global Health Observatory life expectancy data across 193 countries, enriched with UN region/sub-region
-    classifications. 18 indicators per country-year: life expectancy, adult/infant mortality, immunization
-    rates, health expenditure, GDP per capita, population, schooling years, and income composition of resources
-    (a 0-1 scaled proxy for HDI's income component).
+    WHO Global Health Observatory life expectancy data across 193 countries, enriched with UN region and
+    sub-region classifications. There are 18 indicators per country per year: life expectancy, adult and
+    infant mortality, immunization rates, health expenditure, GDP per capita, population, schooling years, and
+    income composition of resources (a scaled proxy for the income component of the HDI).
   </p>
   <p style="font-size:0.85rem;color:var(--text-muted);">
-    This is a real public health dataset with genuine gaps in several indicators — handled by leaving them as
-    blanks rather than silently filling them, so Power BI's aggregates exclude missing values correctly instead
-    of treating them as zero.
+    This is a real public health dataset with genuine gaps in several indicators, handled by leaving them as
+    blanks rather than silently filling them in, so Power BI's aggregates exclude missing values correctly
+    instead of treating them as zero.
   </p>
 
-  <h2>Data model — star schema</h2>
+  <h2>Data model: star schema</h2>
   <pre><code>Dim_Country  (193 rows)   CountryKey, Country, ISO3, Region, SubRegion, Status
 Dim_Year     (16 rows)    YearKey, Year
 Fact_HealthDevelopment (2,938 rows)  CountryKey, YearKey, + 18 indicators
 
 Fact_HealthDevelopment[CountryKey] → Dim_Country[CountryKey]   (many-to-one)
 Fact_HealthDevelopment[YearKey]    → Dim_Year[YearKey]          (many-to-one)</code></pre>
-  <p>Same star-schema modeling principle as the AfiLearn data warehouse project on this site — applied here in Power BI instead of SQL.</p>
+  <p>The same star schema modeling principle as the AfiLearn data warehouse project on this site, applied here in Power BI instead of SQL.</p>
 
   <h2>DAX measures</h2>
   <pre><code>Avg Life Expectancy = AVERAGE ( Fact_HealthDevelopment[LifeExpectancy] )
@@ -75,17 +86,25 @@ RETURN [Avg Life Expectancy] - PriorYearAvg
 Life Expectancy Rank = RANKX ( ALL ( Dim_Country ), [Avg Life Expectancy], , DESC )</code></pre>
   <p style="font-size:0.85rem;color:var(--text-muted);">Full measure list (7 measures) in the repository README.</p>
 
-  <h2>Planned layout — 3 report pages</h2>
+  <h2>Planned layout: 3 report pages</h2>
   <ul>
-    <li><strong>Global Overview</strong> — KPI cards, a filled map colored by life expectancy, a Developed-vs-Developing
-    trend line, and Year/Region/Status slicers.</li>
-    <li><strong>Human Development Lens</strong> — three KPI cards echoing HDI's health/education/income components,
-    plus a Gapminder-style scatter (GDP per capita × life expectancy, sized by population, colored by region).</li>
-    <li><strong>Regional Comparison</strong> — bar chart and table comparing regions across all key indicators.</li>
+    <li><strong>Global Overview:</strong> KPI cards, a filled map colored by life expectancy, a developed versus
+    developing trend line, and Year, Region, and Status slicers.</li>
+    <li><strong>Human Development Lens:</strong> three KPI cards echoing the health, education, and income
+    components of the HDI, plus a Gapminder style scatter plot (GDP per capita against life expectancy, sized
+    by population, colored by region).</li>
+    <li><strong>Regional Comparison:</strong> a bar chart and table comparing regions across all key indicators.</li>
   </ul>
 
+  <h2>What this means for a business</h2>
+  <p>
+    Whether the numbers are countries or store locations, the underlying skill is the same: modeling data
+    properly so it can be sliced by region, time, and category, then writing the calculations that turn raw
+    figures into the metrics leadership actually asks for.
+  </p>
+
   <h2>Repository</h2>
-  <p><code>projects/powerbi-development-dashboard/</code> — the cleaned CSVs (<code>Dim_Country.csv</code>,
+  <p><code>projects/powerbi-development-dashboard/</code>: the cleaned CSVs (<code>Dim_Country.csv</code>,
   <code>Dim_Year.csv</code>, <code>Fact_HealthDevelopment.csv</code>), the build script, and the full README with
   every DAX measure and layout instruction, in this repository
   (<a href="https://github.com/leesey15" target="_blank" rel="noopener">github.com/leesey15</a>).</p>

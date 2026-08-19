@@ -3,14 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Retail Sales &amp; Profitability Dashboard — Aseye Gbagbo</title>
+<title>Retail Sales &amp; Profitability Dashboard · Aseye Gbagbo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
 </head>
-<body>
+<body class="proj-excel">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Aseye Gbagbo</a>
-    <nav><a href="../index.html#projects">All projects</a></nav>
+    <nav><a href="../index.html#projects">All projects</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
   </div>
 </header>
 
@@ -25,11 +34,12 @@
     <span class="badge">Conditional Formatting</span><span class="badge">Dashboard Design</span>
   </div>
 
-  <h2>The question</h2>
+  <h2>In plain terms</h2>
   <p>
-    Which regions, categories, and discount levels actually drive profitability for a retailer — and where is
-    revenue being generated at the expense of margin? Built on the widely-used "Sample Superstore" dataset
-    (US retailer, 9,994 order line items, 2015-2018).
+    Every retail manager asks a version of the same question: which regions, categories, and discount levels
+    actually make money, and where is revenue being generated at the expense of profit? This dashboard answers
+    that using the widely used "Sample Superstore" dataset (a US retailer, 9,994 order line items, from 2015
+    to 2018), and it is built so a manager can open it, filter it, and explore the answer themselves.
   </p>
 
   <div class="kpi-row">
@@ -42,9 +52,9 @@
   <h2>Key finding</h2>
   <div class="callout">
     Profit margin falls sharply as discount deepens. Orders with <strong>no discount</strong> average a
-    <strong>29.5% margin</strong>; orders discounted <strong>40% or more</strong> are sold at an average
-    <strong>-50.0% margin</strong> — a loss. Discounting isn't uniformly bad, but past roughly 20%, it stops
-    paying for itself in this dataset.
+    <strong>29.5% margin</strong>, while orders discounted <strong>40% or more</strong> are sold at an average
+    <strong>loss of 50.0%</strong>. Discounting isn't uniformly bad, but past roughly 20%, it stops paying for
+    itself in this dataset, a clear signal for a pricing or sales team to act on.
   </div>
 
   <img class="figure" src="../assets/images/excel_dashboard.jpg" alt="Excel dashboard showing KPI cards, sales by category, profit by region, profit margin by discount tier, and monthly sales trend charts">
@@ -55,8 +65,8 @@
     helper columns (Year-Month via <code>TEXT()</code>, Profit Margin, and a Discount Tier built with nested
     <code>IF</code>), plus an <code>INDEX/MATCH</code> lookup column against a reference table.</li>
     <li><strong>Summary</strong> sheet: pivot-style breakdowns by Category, Region, Segment, Discount Tier, and
-    Month — all built with <code>SUMIFS</code>/<code>COUNTIFS</code> against the Data table, so every number
-    recalculates automatically if the underlying data changes. A Top-10 sub-category ranking uses
+    Month, all built with <code>SUMIFS</code>/<code>COUNTIFS</code> against the Data table, so every number
+    recalculates automatically if the underlying data changes. A Top 10 sub-category ranking uses
     <code>LARGE</code> + <code>INDEX/MATCH</code> rather than a hardcoded list.</li>
     <li><strong>Dashboard</strong> sheet: KPI cards and five charts built directly from the Summary formulas.</li>
   </ul>

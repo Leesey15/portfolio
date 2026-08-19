@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aseye Gbagbo — Data Analytics Portfolio</title>
+<title>Aseye Gbagbo · Data Analytics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/theme.js"></script>
 </head>
 <body>
 
@@ -12,97 +16,386 @@
   <div class="wrap">
     <a href="index.html" class="brand">Aseye Gbagbo</a>
     <nav>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="mailto:aseye.gbagbo@gmail.com">Contact</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
   <section class="hero">
-    <h1>Aseye Amenuveve Gbagbo</h1>
-    <p class="subtitle">MSc Data Science Candidate · Data Analytics &amp; Digital Communications</p>
-    <p class="lede">
-      I work across Excel, Power BI, Python, and SQL to turn raw data into decisions —
-      from predictive modeling and database engineering to dashboards anyone can read.
-      This portfolio collects five projects spanning machine learning, data warehousing,
-      business analytics, and interactive reporting.
-    </p>
-    <div class="links">
-      <a class="primary" href="mailto:aseye.gbagbo@gmail.com">Email me</a>
-      <a href="https://github.com/leesey15" target="_blank" rel="noopener">GitHub</a>
+    <div class="hero-photo-wrap">
+      <img src="assets/images/profile.jpg" alt="Portrait of Aseye Gbagbo">
+    </div>
+    <div class="hero-text">
+      <span class="pill"><span class="dot"></span>Open to data & analytics opportunities</span>
+      <h1>Aseye Amenuveve Gbagbo</h1>
+      <p class="subtitle">MSc Data Science Candidate · Data Analytics &amp; Digital Communications</p>
+      <p class="lede">
+        I help businesses make sense of their data and turn it into decisions people can act on.
+        Using Excel, Power BI, Python, and SQL, I build clean datasets, clear dashboards, and
+        predictive models that tell a story, not just show numbers. This portfolio includes five
+        projects covering machine learning, data management, and business analytics.
+      </p>
+      <div class="links">
+        <a class="primary" href="mailto:aseye.gbagbo@gmail.com">Email me</a>
+        <a href="assets/files/Aseye_Gbagbo_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a href="https://github.com/leesey15" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="taglist">
+        <span>Data storytelling</span>
+        <span>Detail-oriented</span>
+        <span>Dashboards that read clearly</span>
+        <span>Always learning</span>
+      </div>
     </div>
   </section>
 
-  <h2 class="section-title" id="projects">Projects</h2>
+  <div class="section-head" id="skills">
+    <p class="section-kicker">// what I bring to a team</p>
+    <h2 class="section-title">Skills</h2>
+  </div>
+  <div class="edu-grid" style="max-width:900px;">
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div>
+        <h3>Data storytelling</h3>
+        <div class="edu-sub">Turning numbers into a clear story people can act on, not just charts to look at.</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+      <div>
+        <h3>Dashboard design</h3>
+        <div class="edu-sub">Building dashboards that make sense in seconds, instead of spreadsheets people have to decode.</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div>
+        <h3>Predictive analytics</h3>
+        <div class="edu-sub">Using data and machine learning to answer forward looking questions, like which customers are worth investing in.</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg></div>
+      <div>
+        <h3>Data cleaning &amp; management</h3>
+        <div class="edu-sub">Turning messy, real world data into information a business can actually trust.</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="7" y1="8" x2="15" y2="8"/><line x1="7" y1="12" x2="12" y2="12"/></svg></div>
+      <div>
+        <h3>Clear communication</h3>
+        <div class="edu-sub">Explaining technical findings in plain language so non technical teams can use them too.</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <div>
+        <h3>Accuracy &amp; attention to detail</h3>
+        <div class="edu-sub">Checking every number and formula so people can trust what they are looking at.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head" id="stack">
+    <p class="section-kicker">// technologies &amp; tools</p>
+    <h2 class="section-title">Stack</h2>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-item core">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+      <span>Excel</span>
+    </div>
+    <div class="stack-item core">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Power BI</span>
+    </div>
+    <div class="stack-item core">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
+      <span>Python</span>
+    </div>
+    <div class="stack-item core">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>
+      <span>SQL</span>
+    </div>
+  </div>
+  <p class="stack-row-label">libraries &amp; databases</p>
+  <div class="stack-grid">
+    <div class="stack-item">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg>
+      <span>pandas</span>
+    </div>
+    <div class="stack-item">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56-2.93 2.93-2.083 8.53-1.088 9.525.805.804 6.595 1.843 9.526-1.088a9.74 9.74 0 0 0 .584-.643c.043-.292.205-.66.489-1.106a1.848 1.848 0 0 1-.537.176c-.144.265-.37.55-.676.855-.354.335-.607.554-.76.656a.795.795 0 0 1-.437.152c-.35 0-.514-.308-.494-.924-.22.316-.425.549-.612.7a.914.914 0 0 1-.578.224c-.194 0-.36-.09-.496-.273a1.03 1.03 0 0 1-.193-.507 4.016 4.016 0 0 1-.726.583c-.224.132-.47.197-.74.197-.3 0-.543-.096-.727-.288a.978.978 0 0 1-.257-.524v.004c-.3.276-.564.48-.79.611a1.295 1.295 0 0 1-.649.197.693.693 0 0 1-.571-.275c-.145-.183-.218-.43-.218-.739 0-.464.101-1.02.302-1.67.201-.65.445-1.25.733-1.797l.842-.312a.21.21 0 0 1 .06-.013c.063 0 .116.047.157.14.04.095.061.221.061.38 0 .451-.104.888-.312 1.31-.207.422-.532.873-.974 1.352-.018.23-.027.388-.027.474 0 .193.036.345.106.458.071.113.165.169.282.169a.71.71 0 0 0 .382-.13c.132-.084.333-.26.602-.523.028-.418.187-.798.482-1.142.324-.38.685-.569 1.08-.569.206 0 .37.054.494.16a.524.524 0 0 1 .186.417c0 .458-.486.829-1.459 1.114.088.43.32.646.693.646a.807.807 0 0 0 .417-.117c.129-.076.321-.243.575-.497.032-.252.118-.495.259-.728.182-.3.416-.544.701-.73.285-.185.537-.278.756-.278.276 0 .47.127.58.381l.677-.374h.186l-.292.971c-.15.488-.226.823-.226 1.004 0 .19.067.285.202.285.086 0 .181-.045.285-.137.104-.092.25-.232.437-.42v.001c.143-.155.274-.32.392-.494-.19-.084-.285-.21-.285-.375 0-.17.058-.352.174-.545.116-.194.275-.29.479-.29.172 0 .258.088.258.265 0 .139-.05.338-.149.596.367-.04.687-.32.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732-1.019-1.02-2.408-1.5-3.895-1.471zm4.725 8.203a8.938 8.938 0 0 1-1.333 2.151 1.09 1.09 0 0 0-.012.147c0 .168.047.309.14.423.092.113.206.17.34.17.296 0 .714-.264 1.254-.787-.001.04-.003.08-.003.121 0 .146.012.368.036.666l.733-.172c0-.2.003-.357.01-.474.01-.157.033-.33.066-.517.02-.11.07-.216.152-.315l.186-.216a5.276 5.276 0 0 1 .378-.397c.062-.055.116-.099.162-.13a.26.26 0 0 1 .123-.046c.055 0 .083.035.083.106 0 .07-.052.236-.156.497-.194.486-.292.848-.292 1.084 0 .175.046.314.136.418a.45.45 0 0 0 .358.155c.365 0 .803-.269 1.313-.808v-.381c-.361.426-.623.64-.784.64-.109 0-.163-.067-.163-.2 0-.1.065-.316.195-.65.19-.486.285-.836.285-1.048a.464.464 0 0 0-.112-.319.36.36 0 0 0-.282-.127c-.165 0-.354.077-.567.233-.213.156-.5.436-.863.84.053-.262.165-.622.335-1.08l-.809.156a6.54 6.54 0 0 0-.399 1.074c-.04.156-.07.316-.092.48a7.447 7.447 0 0 1-.49.45.38.38 0 0 1-.229.08.208.208 0 0 1-.174-.082.352.352 0 0 1-.064-.222c0-.1.019-.214.056-.343.038-.13.12-.373.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854-1.352 1.352-1.07 3.827.631 5.527 1.7 1.701 4.95 1.21 5.527.632.467-.466 1.07-3.827-.631-5.527-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362.428.684h-.198l-.357-.575-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717c0 .037.006.062.02.075.012.013.037.02.074.02a.23.23 0 0 0 .078-.01v.141a.802.802 0 0 1-.136.014.23.23 0 0 1-.15-.043.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258c.081 0 .15.012.207.038.057.024.1.061.13.11s.045.106.045.173h-.176c-.006-.111-.075-.167-.208-.167a.285.285 0 0 0-.164.041.134.134 0 0 0-.06.117c0 .035.015.065.045.088.03.024.08.044.15.06l.16.039a.47.47 0 0 1 .224.105c.047.046.07.108.07.186a.3.3 0 0 1-.052.175.327.327 0 0 1-.152.116.585.585 0 0 1-.226.041c-.136 0-.24-.03-.309-.088-.069-.059-.105-.149-.109-.269h.176c.004.037.01.065.017.084a.166.166 0 0 0 .034.054c.044.043.112.065.204.065a.31.31 0 0 0 .177-.045.139.139 0 0 0 .067-.119.116.116 0 0 0-.038-.09.287.287 0 0 0-.124-.055l-.156-.038a1.248 1.248 0 0 1-.159-.05.359.359 0 0 1-.098-.061.22.22 0 0 1-.058-.083.32.32 0 0 1-.016-.108c0-.096.036-.174.109-.232a.45.45 0 0 1 .29-.087zm1.035 0a.46.46 0 0 1 .202.043.351.351 0 0 1 .187.212.577.577 0 0 1 .023.126h-.168a.256.256 0 0 0-.078-.168.242.242 0 0 0-.17-.06.248.248 0 0 0-.155.05.306.306 0 0 0-.1.144.662.662 0 0 0-.034.224.58.58 0 0 0 .035.214.299.299 0 0 0 .101.135.261.261 0 0 0 .157.048c.142 0 .227-.084.256-.252h.167a.519.519 0 0 1-.065.22.35.35 0 0 1-.146.138.464.464 0 0 1-.216.048.448.448 0 0 1-.246-.066.441.441 0 0 1-.161-.192.703.703 0 0 1-.057-.293c0-.085.01-.163.032-.233a.522.522 0 0 1 .095-.182.403.403 0 0 1 .15-.117.453.453 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618c-.08 0-.2.204-.356.611-.155.407-.308.977-.459 1.71.281-.312.509-.662.683-1.05.175-.387.262-.72.262-.999a.455.455 0 0 0-.036-.197c-.025-.05-.056-.075-.093-.075zm4.662 1.797c-.221 0-.431.188-.629.563-.197.376-.296.722-.296 1.038 0 .12.029.216.088.29a.273.273 0 0 0 .223.111c.221 0 .43-.188.625-.565.196-.377.294-.725.294-1.043a.457.457 0 0 0-.083-.29.269.269 0 0 0-.222-.104zm-2.848.007c-.146 0-.285.11-.417.333-.133.222-.2.51-.2.866.566-.159.849-.452.849-.881 0-.212-.077-.318-.232-.318Z"/></svg>
+      <span>scikit-learn</span>
+    </div>
+    <div class="stack-item">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M21.678.521c-1.032-.92-2.28-.55-3.513.544a8.71 8.71 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544.237.48.422 1.093.544 1.561a13.044 13.044 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146a1.689 1.689 0 0 0-.033-.08c-.138-.32-.518-.995-.686-1.289-.143.423-.27.818-.376 1.176.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464-.217.804-.304 1.346-.226 1.478.152.256.296.698.422 1.186.286 1.1.485 2.44.485 2.44l.017.224a22.41 22.41 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967.09-2.398.642-5.29 1.661-8.304 1.723-4.55 4.113-8.201 6.3-9.945-1.993 1.8-4.692 7.63-5.5 9.788-.904 2.416-1.545 4.684-1.931 6.857.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.842 1.842 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a22.953 22.953 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27.01 27.01 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057-.116-.197-.098-.31-.097-.432 0-.12.015-.245.037-.386a9.98 9.98 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a32.8 32.8 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791.066-.069.133-.128.198-.194Z"/></svg>
+      <span>SQLite</span>
+    </div>
+    <div class="stack-item">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.363 0 0 5.363 0 12s5.363 12 12 12 12-5.363 12-12S18.637 0 12 0zM9.502 7.03a4.974 4.974 0 0 1 4.97 4.97 4.974 4.974 0 0 1-4.97 4.97A4.974 4.974 0 0 1 4.532 12a4.974 4.974 0 0 1 4.97-4.97zm6.563 3.183h2.351c.98 0 1.787.782 1.787 1.762s-.807 1.789-1.787 1.789h-2.351v-3.551z"/></svg>
+      <span>DuckDB</span>
+    </div>
+  </div>
+
+  <div class="section-head" id="projects">
+    <p class="section-kicker">// selected work</p>
+    <h2 class="section-title">Projects</h2>
+  </div>
   <div class="project-grid">
 
-    <a class="card" href="projects/msc-banking-prediction.html" style="text-decoration:none;">
+    <a class="card accent-ml" href="projects/msc-banking-prediction.html" style="text-decoration:none;">
+      <div class="card-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 18L20 4" stroke-dasharray="1.5 3.5"/>
+          <circle cx="6" cy="16" r="1.5" fill="currentColor" stroke="none"/><circle cx="10" cy="9" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="14" cy="13" r="1.5" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="card-body">
       <span class="tag">Machine Learning</span>
       <h3>Early Prediction of High-Potential Banking Customers</h3>
-      <p>MSc thesis project: can 90 days of transaction data predict a bank customer's future value as reliably as
-      waiting a full year? Random Forest &amp; Logistic Regression on 4,500 real accounts, ROC-AUC up to 0.86,
-      validated with bootstrap significance testing.</p>
+      <p>A bank does not need to wait a full year to know which new customers are worth investing in. For my
+      MSc thesis, I trained Random Forest and Logistic Regression models on 4,500 real bank accounts to test
+      whether 90 days of transaction data can predict a customer's future value as reliably as waiting twelve
+      months, reaching a ROC-AUC of 0.86 and validated with bootstrap significance testing.</p>
+      <div class="stat-row">
+        <span class="stat"><b>0.86</b>&nbsp;ROC-AUC</span>
+        <span class="stat"><b>4,500</b>&nbsp;accounts</span>
+      </div>
       <div class="badges">
         <span class="badge">Python</span><span class="badge">scikit-learn</span><span class="badge">pandas</span>
       </div>
-      <div class="cta">View case study →</div>
+      <div class="cta">View case study</div>
+      </div>
     </a>
 
-    <a class="card" href="projects/afilearn-data-management.html" style="text-decoration:none;">
+    <a class="card accent-dataeng" href="projects/afilearn-data-management.html" style="text-decoration:none;">
+      <div class="card-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/>
+          <path d="M6.7 7.3L10.6 10.6M17.3 7.3L13.4 10.6M12 14V17"/>
+        </svg>
+      </div>
+      <div class="card-body">
       <span class="tag">Data Engineering</span>
-      <h3>AfiLearn — End-to-End Data Management Pipeline</h3>
-      <p>13-phase university learning-analytics project: relational database design, query optimization, ETL
-      &amp; data quality checks, a star-schema warehouse, NoSQL, big-data processing with DuckDB, and
-      security/RBAC/backups.</p>
+      <h3>AfiLearn Data Management Pipeline</h3>
+      <p>Every dashboard and report a company relies on is only as good as the data behind it. This project
+      builds that foundation from scratch: a clean, well organized database that checks its own data for
+      errors automatically, so the numbers going into every report can actually be trusted. Built in 13
+      stages on a learning analytics dataset of over 11 million records.</p>
+      <div class="stat-row">
+        <span class="stat"><b>13</b>&nbsp;phases</span>
+        <span class="stat"><b>11.1M</b>&nbsp;rows</span>
+      </div>
       <div class="badges">
         <span class="badge">SQL</span><span class="badge">SQLite</span><span class="badge">DuckDB</span><span class="badge">Python</span>
       </div>
-      <div class="cta">View case study →</div>
+      <div class="cta">View case study</div>
+      </div>
     </a>
 
-    <a class="card" href="projects/excel-retail-analysis.html" style="text-decoration:none;">
+    <a class="card accent-excel" href="projects/excel-retail-analysis.html" style="text-decoration:none;">
+      <div class="card-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="19" x2="21" y2="19"/><line x1="6" y1="19" x2="6" y2="11"/><line x1="11" y1="19" x2="11" y2="6"/><line x1="16" y1="19" x2="16" y2="14"/><line x1="21" y1="19" x2="21" y2="9"/>
+        </svg>
+      </div>
+      <div class="card-body">
       <span class="tag">Excel</span>
       <h3>Retail Sales &amp; Profitability Dashboard</h3>
-      <p>Formula-driven Excel workbook analyzing 9,994 retail orders (2015-2018): SUMIFS/INDEX-MATCH summaries,
-      conditional formatting, and a KPI dashboard that surfaces a clear finding — deep discounting quietly
-      erodes profit.</p>
+      <p>A live Excel dashboard built on nearly 10,000 retail orders that answers a question every retail
+      manager asks: where is discounting actually helping sales, and where is it quietly eating into profit.
+      Every number on the dashboard is powered by a formula, fully verified, and ready for a manager to
+      explore on their own.</p>
+      <div class="stat-row">
+        <span class="stat"><b>40,169</b>&nbsp;formulas</span>
+        <span class="stat"><b>0</b>&nbsp;errors</span>
+      </div>
       <div class="badges">
         <span class="badge">Excel</span><span class="badge">SUMIFS</span><span class="badge">INDEX/MATCH</span>
       </div>
-      <div class="cta">View case study →</div>
+      <div class="cta">View case study</div>
+      </div>
     </a>
 
-    <a class="card" href="projects/sql-chinook-analytics.html" style="text-decoration:none;">
+    <a class="card accent-sql" href="projects/sql-chinook-analytics.html" style="text-decoration:none;">
+      <div class="card-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 12v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-6"/>
+        </svg>
+      </div>
+      <div class="card-body">
       <span class="tag">SQL</span>
-      <h3>Digital Media Store — SQL Business Analytics</h3>
-      <p>Nine business-analytics queries against a relational sales database: joins, CTEs, and window functions
-      (RANK, NTILE, LAG, running totals) answering real revenue, customer-value, and performance questions.</p>
+      <h3>SQL Business Analytics for a Digital Media Store</h3>
+      <p>The kind of questions a sales or finance team asks every month: which products sell best, which
+      customers spend the most, and how performance is trending year over year. Nine SQL queries answer these
+      using real transaction data from a digital media store, the same techniques used for revenue and
+      customer reporting in any business.</p>
+      <div class="stat-row">
+        <span class="stat"><b>9</b>&nbsp;queries</span>
+        <span class="stat"><b>412</b>&nbsp;invoices</span>
+      </div>
       <div class="badges">
         <span class="badge">SQL</span><span class="badge">SQLite</span><span class="badge">Window Functions</span>
       </div>
-      <div class="cta">View case study →</div>
+      <div class="cta">View case study</div>
+      </div>
     </a>
 
-    <a class="card" href="projects/powerbi-development-dashboard.html" style="text-decoration:none;">
+    <a class="card accent-pbi" href="projects/powerbi-development-dashboard.html" style="text-decoration:none;">
+      <div class="card-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
+        </svg>
+      </div>
+      <div class="card-body">
       <span class="tag">Power BI</span>
       <h3>Global Human Development Dashboard</h3>
-      <p>A star-schema data model and full DAX/layout build kit for an interactive dashboard exploring health,
-      education, and income across 193 countries — deliberately mirroring the three components of the UN
-      Human Development Index.</p>
+      <p>The same kind of indicators a business might track for regional strategy or social impact reporting:
+      health, education, and income across 193 countries. The data model and every calculation are complete
+      and verified, and the interactive report is being finished in Power BI Desktop.</p>
+      <div class="stat-row">
+        <span class="stat"><b>193</b>&nbsp;countries</span>
+        <span class="stat"><b>7</b>&nbsp;DAX measures</span>
+      </div>
       <div class="badges">
         <span class="badge">Power BI</span><span class="badge">DAX</span><span class="badge">Data Modeling</span>
       </div>
-      <div class="cta">View case study →</div>
+      <div class="cta">View case study</div>
+      </div>
     </a>
 
+  </div>
+
+  <div class="section-head" id="experience">
+    <p class="section-kicker">// my professional path</p>
+    <h2 class="section-title">Experience</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-top">
+        <h3>Laysia Info Consult</h3>
+        <span class="tl-dates">Oct 2025 to Present</span>
+      </div>
+      <div class="tl-role">Administrative Assistant</div>
+      <ul>
+        <li>Manage digital communication, including social media content and client-facing correspondence</li>
+        <li>Prepare materials for conferences and client events</li>
+        <li>Maintain records and information management systems for a records and data consultancy</li>
+      </ul>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-top">
+        <h3>Dept. of Computer Science, University of Ghana</h3>
+        <span class="tl-dates">2026</span>
+      </div>
+      <div class="tl-role">Organizing Committee Member (Volunteer), Postgraduate Research Conference</div>
+      <ul>
+        <li>Drafted formal correspondence, including speaker invitation letters, for an academic research conference</li>
+        <li>Supported planning and coordination among faculty, students, and external speakers</li>
+      </ul>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-top">
+        <h3>GCB Bank PLC, Accra</h3>
+        <span class="tl-dates">Nov 2024 to Oct 2025</span>
+      </div>
+      <div class="tl-role">Secretary</div>
+      <ul>
+        <li>Maintained and updated records and databases; generated routine reports</li>
+        <li>Drafted, proofread, and edited confidential correspondence and official documents</li>
+        <li>Organized meetings, took minutes, and distributed notes to relevant staff</li>
+      </ul>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-top">
+        <h3>GCB Bank PLC, Accra</h3>
+        <span class="tl-dates">Oct 2024 to Nov 2024</span>
+      </div>
+      <div class="tl-role">IT Service Desk Engineer</div>
+      <ul>
+        <li>Provided end-user technical support and training on office applications and systems</li>
+        <li>Managed user accounts, permissions, and system access in line with company policy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section-head" id="education">
+    <p class="section-kicker">// academic background</p>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
+      <div>
+        <h3>MSc Data Science</h3>
+        <div class="edu-sub">University of Ghana, Accra</div>
+        <div class="edu-date">In progress · expected 2026</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
+      <div>
+        <h3>BSc Information Technology</h3>
+        <div class="edu-sub">University of Ghana, Accra</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="stack-row-label">courses &amp; certificates</p>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></div>
+      <div>
+        <h3>Business Analytics with Excel: Elementary to Advanced</h3>
+        <div class="edu-sub">Johns Hopkins University</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></div>
+      <div>
+        <h3>Business Analysis &amp; Process Management</h3>
+        <div class="edu-sub">Coursera</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head" id="contact">
+    <p class="section-kicker">// let's talk</p>
+    <h2 class="section-title">Contact</h2>
+  </div>
+  <div class="contact-card">
+    <p>Whether it's a job opportunity, a project, or just a conversation, feel free to reach out.</p>
+    <div class="links">
+      <a class="primary" href="mailto:aseye.gbagbo@gmail.com">Email me</a>
+      <a href="assets/files/Aseye_Gbagbo_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+    <div class="social-row">
+      <a href="mailto:aseye.gbagbo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+      <a href="https://github.com/leesey15" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+    </div>
   </div>
 </div>
 
 <footer>
-  <div class="wrap">
-    Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com
-  </div>
+  Aseye Amenuveve Gbagbo · aseye.gbagbo@gmail.com
 </footer>
 
 </body>

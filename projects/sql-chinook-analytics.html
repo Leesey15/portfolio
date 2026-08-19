@@ -3,42 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SQL Business Analytics — Aseye Gbagbo</title>
+<title>SQL Business Analytics for a Digital Media Store · Aseye Gbagbo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
 </head>
-<body>
+<body class="proj-sql">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Aseye Gbagbo</a>
-    <nav><a href="../index.html#projects">All projects</a></nav>
+    <nav><a href="../index.html#projects">All projects</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
   </div>
 </header>
 
 <div class="wrap">
 <main class="project">
   <a class="back" href="../index.html#projects">← Back to all projects</a>
-  <h1>Digital Media Store — SQL Business Analytics</h1>
-  <p class="meta">SQL / SQLite · 9 business-analytics queries · Chinook sample database</p>
+  <h1>SQL Business Analytics for a Digital Media Store</h1>
+  <p class="meta">SQL / SQLite · 9 business analytics queries · Chinook sample database</p>
   <div class="badges">
     <span class="badge">Joins</span><span class="badge">CTEs</span><span class="badge">RANK / NTILE / LAG</span>
     <span class="badge">Running Totals</span><span class="badge">Views</span>
   </div>
 
-  <h2>The scope</h2>
+  <h2>In plain terms</h2>
   <p>
-    Nine queries against the <a href="https://github.com/lerocha/chinook-database" target="_blank" rel="noopener">Chinook
-    sample database</a> — a relational digital media store (customers, invoices, tracks, albums, artists,
-    employees) — chosen to demonstrate the query patterns behind most real revenue, customer, and performance
-    reporting: multi-table joins, subqueries, CTEs, and window functions.
+    Which products sell best, which customers spend the most, and is performance trending up or down. These
+    are the questions a sales or finance team asks every single month, and answering them well means being
+    able to query the data directly instead of waiting on a static report. This project answers nine such
+    questions against the <a href="https://github.com/lerocha/chinook-database" target="_blank" rel="noopener">Chinook
+    sample database</a>, a relational digital media store with customers, invoices, tracks, albums, artists,
+    and employees, using the same query techniques (joins, subqueries, and window functions) that power
+    revenue and customer reporting in any business.
   </p>
   <p style="font-size:0.85rem;color:var(--text-muted);">
-    This is a small, widely-used public practice dataset (59 customers, 412 invoices) — absolute revenue figures
-    are illustrative, not business-scale. The point is the query technique.
+    This is a small, widely used public practice dataset (59 customers, 412 invoices), so the revenue figures
+    are illustrative rather than business scale. The point is the query technique, which works the same way
+    on a dataset of any size.
   </p>
 
   <h2>Selected results (real query output)</h2>
 
-  <h3 style="color:var(--navy);font-size:1.05rem;">Revenue by genre — window: which genres dominate?</h3>
+  <h3 style="color:var(--proj-accent);font-size:1.05rem;">Revenue by genre: which genres dominate?</h3>
   <table>
     <thead><tr><th>Genre</th><th>Revenue</th><th>% of total</th></tr></thead>
     <tbody>
@@ -50,7 +63,7 @@
   </table>
   <p>Rock alone outsells the next three genres combined.</p>
 
-  <h3 style="color:var(--navy);font-size:1.05rem;">Customer value segmentation — <code>NTILE(4) OVER</code></h3>
+  <h3 style="color:var(--proj-accent);font-size:1.05rem;">Customer value segmentation using <code>NTILE(4) OVER</code></h3>
   <table>
     <thead><tr><th>Segment</th><th>Customers</th><th>Segment revenue</th><th>Avg spend/customer</th></tr></thead>
     <tbody>
@@ -61,7 +74,7 @@
     </tbody>
   </table>
 
-  <h3 style="color:var(--navy);font-size:1.05rem;">Year-over-year average order value — <code>LAG() OVER</code></h3>
+  <h3 style="color:var(--proj-accent);font-size:1.05rem;">Year over year average order value using <code>LAG() OVER</code></h3>
   <table>
     <thead><tr><th>Year</th><th>Avg order value</th><th>Prior year</th><th>% change</th></tr></thead>
     <tbody>
@@ -74,16 +87,24 @@
 
   <h2>All 9 queries</h2>
   <ol>
-    <li>Revenue by country — JOIN, GROUP BY, aggregates</li>
-    <li>Revenue by genre and % of total — multi-table JOIN, scalar subquery</li>
-    <li>Monthly revenue with cumulative running total — <code>SUM() OVER</code></li>
-    <li>Top 10 customers by lifetime spend, ranked — <code>RANK() OVER</code></li>
-    <li>Sales performance by employee — 3-table JOIN</li>
-    <li>Customer value segmentation — CTE + <code>NTILE(4) OVER</code></li>
-    <li>Year-over-year average order value — CTE + <code>LAG() OVER</code></li>
-    <li>Tracks purchased more than the store average — correlated subquery, HAVING</li>
-    <li>Reusable view for downstream reporting tools — <code>CREATE VIEW</code></li>
+    <li>Revenue by country, using JOIN, GROUP BY, and aggregates</li>
+    <li>Revenue by genre and percent of total, using a multi-table JOIN and scalar subquery</li>
+    <li>Monthly revenue with cumulative running total, using <code>SUM() OVER</code></li>
+    <li>Top 10 customers by lifetime spend, ranked with <code>RANK() OVER</code></li>
+    <li>Sales performance by employee, using a 3-table JOIN</li>
+    <li>Customer value segmentation, using a CTE with <code>NTILE(4) OVER</code></li>
+    <li>Year over year average order value, using a CTE with <code>LAG() OVER</code></li>
+    <li>Tracks purchased more than the store average, using a correlated subquery and HAVING</li>
+    <li>A reusable view for downstream reporting tools, using <code>CREATE VIEW</code></li>
   </ol>
+
+  <h2>What this means for a business</h2>
+  <p>
+    These are the same query patterns behind most revenue and customer reporting: which segment is most
+    valuable, whether performance is improving, and where the biggest opportunities are hiding in the data.
+    A team that can write queries like these does not have to wait on a fixed report to answer a new question,
+    they can just ask it directly.
+  </p>
 
   <h2>Sample query</h2>
   <pre><code>WITH customer_spend AS (
